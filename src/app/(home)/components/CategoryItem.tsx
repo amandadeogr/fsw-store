@@ -17,7 +17,7 @@ const CategoryItem = ({category}: CategoryItemProps) => {
 
     }
     return ( <div>
-        <Badge variant={"outline"} className="px-8 py-3 flex gap-2 justify-center items-center rounded-lg">
+        <Badge variant={"outline"} className="category px-8 py-3 flex gap-2 justify-center items-center rounded-lg hover:cursor-pointer hover:bg-primary">
             {
                 categoryIcon[category.slug as keyof typeof categoryIcon]
             }
