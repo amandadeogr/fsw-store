@@ -4,12 +4,13 @@ import { Product } from "@prisma/client";
 
 interface ProductListProps {
     products: Product[];
+    productName?: string;
 }
-const ProductList = ({products}: ProductListProps) => {
+const ProductList = ({products, productName}: ProductListProps) => {
     
     return ( 
         <>
-            <p className="font-semibold uppercase mb-2">Ofertas</p>
+            <p className="font-semibold uppercase mb-2">{productName}</p>
             <div className="flex w-full gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden pb-8">
                 {
                     products.map(product => (
