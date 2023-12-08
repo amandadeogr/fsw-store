@@ -17,12 +17,12 @@ const CategoyProducts = async ({params}: any) => {
         }
     });
     return ( 
-        <div className="px-8 py-5">
+        <div className="p-5">
             <Badge variant={"outline"} className="border-primary border-2 gap-2 px-3 py-1 text-base uppercase my-6">
                 {CATEGORY_ICON[params.slug as keyof typeof CATEGORY_ICON]}
                 {products[0].category.name}
             </Badge>
-            <div className="flex flex-wrap gap-8 justify-start mb-4">
+            <div className="flex flex-wrap gap-x-4 gap-y-8 mb-4 sm:gap-4 ">
                 {
                     products.map((product) => {
                         return (

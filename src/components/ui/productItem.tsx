@@ -9,15 +9,15 @@ interface ProductItemProps {
 
 const ProductItem = ({product}: ProductItemProps) => {
     return ( 
-        <div className="flex flex-col gap-4 max-w-[156px] hover:cursor-pointer">
-            <div className="bg-accent flex justify-center items-center rounded-lg h-[170px] w-[156px] relative">
+        <div className="flex flex-col gap-4 hover:cursor-pointer max-w-[175px] sm:max-w-[200px]">
+            <div className="bg-accent flex justify-center items-center rounded-lg h-[170px] w-[175px] sm:w-[200px] relative">
                 <Image 
                    src={product.imageUrls[0]}
                     width={0}
                     height={0}
                     alt={product.name}
                     sizes="100vw"
-                    className="h-[90px] w-auto max-w-[80%] hover:scale-125  transition-all duration-300 ease-in-out"
+                    className="h-[90px] w-auto max-w-[80%] hover:scale-125 transition-all duration-300 ease-in-out"
                     style={{
                         objectFit: 'contain'
                     }}
@@ -29,11 +29,11 @@ const ProductItem = ({product}: ProductItemProps) => {
                         </Badge>
                     )}
             </div>
-            <div className="flex flex-col gap-1">
-                <p className="text-sm overflow-hidden text-ellipsis whitespace-nowrap max-w-[156px] pr-2">
+            <div className="flex flex-col gap-1 ml-2">
+                <p className="text-sm overflow-hidden text-ellipsis whitespace-nowrap max-w-[175px] sm:max-w-[200px] pr-2">
                     {product.name}
                 </p>
-                <div className="flex items-center gap-2 justify-between max-w-[157px]">
+                <div className="flex items-center gap-2 justify-between max-w-[170px] sm:w-[190px]">
                     {
                         product.discountPercentage > 0 ? (
                             <>
