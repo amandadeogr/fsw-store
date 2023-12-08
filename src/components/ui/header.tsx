@@ -1,4 +1,4 @@
-import { HomeIcon, ListOrderedIcon, LogInIcon, MenuIcon, PercentIcon, ShoppingCartIcon } from "lucide-react";
+import { HomeIcon, ListOrderedIcon, MenuIcon, PercentIcon, ShoppingCartIcon } from "lucide-react";
 import { Button } from "./button";
 import { Card } from "./card";
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from "./sheet";
@@ -35,9 +35,11 @@ const Header = () => {
                             </Link>
                         </SheetClose>
                         <SheetClose asChild>
-                            <Button variant={"outline"} className="flex gap-2 w-full justify-start">
-                                <PercentIcon size={16} /> Ofertas
-                            </Button>
+                            <Link href="/offers">
+                                <Button variant={"outline"} className="flex gap-2 w-full justify-start">
+                                    <PercentIcon size={16} /> Ofertas
+                                </Button>
+                            </Link>
                         </SheetClose>
                         <SheetClose asChild>
                             <Link href="/catalog">
