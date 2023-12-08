@@ -1,9 +1,9 @@
 import { prismaClient } from "@/lib/prisma";
 import { Badge } from "@/components/ui/badge";
-import { ShapesIcon } from "lucide-react";
 import ProductItem from "@/components/ui/productItem";
 import { ComputedProductTotalPrice } from "@/helpers/product";
 import { CATEGORY_ICON } from "@/app/constants/categoryIcons";
+import LegendComponent from "@/components/ui/legendComponent";
 
 const CategoyProducts = async ({params}: any) => {
     const products = await prismaClient.product.findMany({
@@ -16,9 +16,10 @@ const CategoyProducts = async ({params}: any) => {
             category: true
         }
     });
+    
     return ( 
         <div className="p-5">
-            <Badge variant={"outline"} className="border-primary border-2 gap-2 px-3 py-1 text-base uppercase my-6">
+            <Badge variant={"outline"} className="border-primary border-2 gap-2 px-3 py-1 text-[.8rem] uppercase my-6">
                 {CATEGORY_ICON[params.slug as keyof typeof CATEGORY_ICON]}
                 {products[0].category.name}
             </Badge>
